@@ -1,0 +1,56 @@
+* {
+    outline: none;
+    box-sizing: border-box;
+}
+
+ a {
+    color: #313133;
+}
+
+ a:hover{
+ color: #313133;
+ }
+
+.wrap-circle {
+    max-width: 70px;
+    margin: 0px auto;
+}
+.orangeCircle {
+
+    border-radius: 50%;
+    background: orange;
+    top: -5px;
+    left: 15px;
+    width: 18px;
+    height: 18px;
+    overflow: hidden;
+    color: #ffffff;
+    box-sizing: border-box;
+    font-size: 13px;
+}
+
+.pageName {
+    color: #313133;
+    font-size: 33px ;
+    font-weight: 500;
+}
+
+.starContainer {
+    width: 22px;
+    height: 22px;
+    background: orange;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    top: 1px;
+}
+
+.logoStart {
+    font-size: 17px;
+    margin-bottom: 5px;
+    fill: #ffffff;
+    position: absolute;
+    left: 2px;
+    top:2px;
+
+}

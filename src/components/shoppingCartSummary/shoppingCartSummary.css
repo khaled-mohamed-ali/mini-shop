@@ -1,0 +1,25 @@
+.asideMain {
+    background: #ffffff;
+    border-radius: 5px;
+    color:#7A7A7B;
+}
+
+.asideMain > div {
+    padding: 12px 15px;
+}
+
+.asideMain >div:nth-child(1) {
+    font-size: .875rem;
+    padding-top: 7px;
+    padding-bottom: 8px;
+    font-weight: 500;
+}
+
+.asideMain >div:nth-child(2) {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.asideMain >div:nth-child(3) {
+    font-size: 14px;
+}

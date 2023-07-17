@@ -1,0 +1,77 @@
+
+.notificationBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+}
+.notificationBar li {
+    width: 100%;
+    height: 40px;
+    background: #6DBD28;
+    list-style: none;
+    border-bottom: 0.3px solid white;
+    color: white;
+}
+.notificationBar li span {
+    display: inline-block;
+    height: 100%;
+    padding-top: 7px;
+}
+
+.notificationBar li div:nth-child(1){
+    flex-grow: 1!important;
+    text-align: center;
+}
+
+.notificationBar li div:nth-child(2){
+    align-items: center;
+}
+
+.notificationBar li button {
+    padding: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.notification-container .close-icon {
+    padding: 0;
+    padding-top: 2px;
+    font-size: 28px;
+    background: #6DBD28;
+    color: black;
+    stroke: black;
+    fill: white;
+    border: none;
+    overflow: hidden;
+}
+
+.notification-container .close-icone:hover {
+    cursor: pointer;
+}
+.notification-container {
+    margin: 0px auto;
+    width: 75%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between!important;
+    align-items: baseline;
+
+}
+
+@media only  screen and (max-width:350px) {
+    .notification-container  {
+        width: 90%
+    }
+}
+
+
+
+
+
+

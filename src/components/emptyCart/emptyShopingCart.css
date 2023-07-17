@@ -1,0 +1,51 @@
+.mainEmptyCart {
+    background: white;
+    width: 75%;
+    height: 334px;
+    padding: 42px 0px 32px 0px;
+    margin: 15px auto;
+    border-radius: 4px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%);
+}
+
+
+
+.mainEmptyCart p {
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+
+
+.mainEmptyCart span {
+    display: block;
+    font-size: 15px;
+
+}
+.mainEmptyCart .btn-empty-cart {
+        background: #F68B1E;
+        box-sizing: content-box;
+        border: 0;
+        color: white;
+        margin-top: 30px;
+        padding: 16px;
+        border-radius: 5px;
+        font-weight: bolder;
+        font-size: 16px;
+        outline: none;
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+
+}
+
+.mainEmptyCart .btn-empty-cart:hover {
+    cursor: pointer;
+    background: #e07e1b;
+}
+
+@media  screen and (max-width : 700px) {
+    .mainEmptyCart {
+        width: 100%;
+    }
+}
+
+

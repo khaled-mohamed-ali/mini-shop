@@ -1,0 +1,55 @@
+.product:not(:last-child) {
+    border-bottom:  1px solid #D4D4D6;
+}
+
+
+.img-container {
+    width: 72px!important;
+    height: 72px!important;
+
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+
+}
+
+.product-text {
+    word-wrap: break-word;
+    flex-grow: 1;
+    padding-right: 15%;
+
+}
+
+.product-price {
+    width: auto;
+    font-weight: 600;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+.trachIcone {
+    color : #f68b1e ;
+    font-weight: 500;
+    padding: 4px;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 13px;
+}
+.trachIcone:hover {
+    background: #fcdbb9;
+    cursor: pointer;
+}
+
+.trachIcone svg {
+    font-size: 17px;
+    padding-right: 2px;
+}
+
+@media only  screen and (max-width:768px) {
+    .product-text {
+        padding-right: 0;
+    }
+}
+
+

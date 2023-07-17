@@ -1,0 +1,22 @@
+.mainPagination {
+    margin: 50px auto;
+}
+
+.active a ,.page-link{
+    background: #f68b1e !important;
+    color: #ffffff !important;
+    outline: none !important;
+    border: none!important;
+    font-weight: 500;
+    border-radius: 3px;
+}
+
+.page-link:hover {
+    background: #e07e1b!important;
+}
+
+
+
+.page-link:focus   {
+    box-shadow: none!important;
+}

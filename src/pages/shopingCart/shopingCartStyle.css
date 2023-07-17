@@ -1,0 +1,6 @@
+@media only screen and (max-width:992px) {
+    .cartSummary {
+        padding: 0!important;
+        margin-top: 10px;
+    }
+}
