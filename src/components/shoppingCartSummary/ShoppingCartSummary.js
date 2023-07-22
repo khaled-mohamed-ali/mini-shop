@@ -14,7 +14,7 @@ export const ShoppingCartSummary = () => {
                <div>Subtotal</div>
                <div className="fs-6 dark">{calcTotalPrice} EGP</div>
            </div>
-           <div className="p-2"><button href="" className="btn-primary d-block p-2 rounded-1 w-100">CHECKOUT ( )</button></div>
+           <div className="p-2"><button id="btn-primary"  className="btn-primary  d-block p-2 rounded-1 w-100">CHECKOUT ( )</button></div>
        </aside>
     )
 }

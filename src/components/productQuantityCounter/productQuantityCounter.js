@@ -21,9 +21,9 @@ const minusQuantity = () => {
 
     return (
         <div className="buttons-container d-flex justify-content-between align-items-end ">
-            <button className="btn-primary" disabled={props.product.quantity <= 1}  onClick={()=> minusQuantity() }><AiOutlineMinus/></button>
+            <button className="btn-primary" id="btn-primary" disabled={props.product.quantity <= 1}  onClick={()=> minusQuantity() }><AiOutlineMinus/></button>
             <div className="px-3">{props.quantity}</div>
-            <button className="btn-primary" disabled={props.quantity >= 15} onClick={()=> plusQuantity()}><AiOutlinePlus/></button>
+            <button id="btn-primary" className="#btn-primary" disabled={props.quantity >= 15} onClick={()=> plusQuantity()}><AiOutlinePlus/></button>
         </div>
     )
 }

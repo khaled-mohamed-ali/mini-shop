@@ -17,7 +17,6 @@ import {useGetAllProductsSearchQuery} from "../../services/productsApi";
 import {useState} from "react";
 import {setSearchResult} from "../../store/shopingCartSlice";
 
-
 export const Header = () => {
 
 
@@ -26,6 +25,7 @@ export const Header = () => {
     const product = useSelector(state => state.cart.value);
     const searchResults = useSelector(state => state.cart.searchResult)
     const dispatch = useDispatch();
+
 
     if (data === undefined) {
         return []
@@ -44,12 +44,13 @@ export const Header = () => {
         <div className="Header mt-4">
             <Navbar bg='white' expand="lg">
                 <Container className='justify-content-between w-75'>
-                    <Navbar.Brand className="fw-bolder pageName"><Link to="/">MINI SHOP <div className="starContainer">
+                    <Navbar.Brand className="fw-bolder pageName"><Link id="aLink" to="/">MINI SHOP <div className="starContainer">
                         <BsFillStarFill className="logoStart"/></div></Link></Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll"/>
                     <Navbar.Collapse id="navbarScroll" className="justify-content-between flex-grow-1">
                         <Form className="d-flex flex-grow-1  justify-content-center ">
                             <Form.Control
+                                id="searchInput"
                                 type="text"
                                 placeholder="Search"
                                 className="me-2 w-50"
@@ -57,7 +58,7 @@ export const Header = () => {
                                 value={searchItem}
                                 onChange={(event) => setSearchItem(event.target.value)}
                             />
-                            <Link to={searchItem.length >= 1 ? '/search' : '/'}>
+                            <Link id="aLink" to={searchItem.length >= 1 ? '/search' : '/'}>
                                 <Button onClick={() => {
                                     return (
                                         searchHandler()
@@ -69,28 +70,29 @@ export const Header = () => {
                                         variant="outline-success"
                                         type="submit"
                                         className="btn-primary fs-6"
+                                        id="btn-primary"
                                 >
                                     Search
                                 </Button>
                             </Link>
                         </Form>
-                        <Nav className="me-auto my-2 my-lg-0 fs-7 fw-semibold" style={{maxHeight: '100px'}}
+                        <Nav  className="me-auto my-2 my-lg-0 fs-7 fw-semibold" style={{maxHeight: '100px'}}
                              navbarScroll>
                             <NavDropdown
-                                title={<span><AiOutlineUser className="fs-3"/>&nbsp;&nbsp;login&nbsp;&nbsp;</span>}
-                                id="navbarScrollingDropdown">
-                                <NavDropdown.Item><Link to="register">Register</Link></NavDropdown.Item>
-                                <NavDropdown.Item><Link to="login">Login</Link></NavDropdown.Item>
-                                <NavDropdown.Item><Link
+                                title={<span id="aLink" style={{color:"black"}}><AiOutlineUser className="fs-3"/>&nbsp;&nbsp;login&nbsp;&nbsp;</span>}
+                                id="navbarScrollingDropdown ">
+                                <NavDropdown.Item><Link id="aLink" to="/register">Register</Link></NavDropdown.Item>
+                                <NavDropdown.Item><Link id="aLink" to="/login">Login</Link></NavDropdown.Item>
+                                <NavDropdown.Item><Link id="aLink"
                                     onClick={() => dispatch(setLogin(false))}>logout &nbsp;&nbsp;&nbsp;
                                     <MdLogout/></Link></NavDropdown.Item>
 
                             </NavDropdown>
-                            <Nav.Link><FiHelpCircle className="fs-3"/>&nbsp;&nbsp;Help</Nav.Link>
-                            <Nav.Link className="position-relative">
+                            <Nav.Link id="aLink"><FiHelpCircle className="fs-3"/>&nbsp;&nbsp;Help</Nav.Link>
+                            <Nav.Link id="aLink" to="/shoppingCart" className="position-relative">
                                 <div className="wrap-circle position-relative">{itemCount ?
                                     <div className="orangeCircle  position-absolute">{itemCount}</div> : ""}
-                                    <Link to="/shoppingCart"> <AiOutlineShoppingCart className="fs-3"/> Cart</Link> <i
+                                    <Link id="aLink" to="/shoppingCart"> <AiOutlineShoppingCart className="fs-3"/> Cart</Link> <i
                                         className="bi bi-cart3"/>
                                 </div>
                             </Nav.Link>

@@ -77,9 +77,9 @@ export const Login = () => {
 
                             <div className="d-flex justify-content-between mx-3 mb-4">
                                 <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Remember me'/>
-                                <a href="!#">Forgot password?</a>
+                                <a  id="aLink" href="!#">Forgot password?</a>
                             </div>
-                            <button type="submit" className='btn-primary w-100 py-2 px-4 mb-4' size='lg'
+                            <button type="submit" id="btn-primary" className='btn-primary  w-100 py-2 px-4 mb-4' size='lg'
                             >login
                             </button>
                         </Form>
@@ -87,7 +87,7 @@ export const Login = () => {
                 </Formik>
 
                 <div className="text-center">
-                    <p>Not a member? <a href="/register">Register</a></p>
+                    <p>Not a member? <a d="aLink" href="/register">Register</a></p>
                     <p>or sign up with:</p>
                     <div className="text-center text-dark p-3">
                         <ul className="list-unstyled d-flex justify-content-around">

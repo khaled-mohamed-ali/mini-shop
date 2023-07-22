@@ -10,7 +10,7 @@
 }
 
 .product-card {
-    height: 35rem!important;
+    height: 35rem;
     transition: all 0.3s ease-in-out
 }
 
@@ -31,7 +31,7 @@
     }
 
     .card-text {
-        width: 90%!important;
+        width: 90%;
         height: 30%;
         overflow: hidden;
     }
@@ -47,8 +47,8 @@
 }
 
 .img-container {
-    width: 100%!important;
-    height: auto!important;
+    width: 100%;
+    height: auto;
     background-image:url('empty.png') ;
-    background-size: cover!important;
+    background-size: cover;
 }

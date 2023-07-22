@@ -9,7 +9,6 @@ import {closeOpenDeleteConfirm,deleteFromCart,hideNotificationMessage} from "../
 
 export const DeleteWarning = () => {
     const idToDeleteSpecfic = useSelector(state => state.cart.value.idCatcher)
-    (idToDeleteSpecfic)
     const dispatch = useDispatch();
     const deleteFromTheCart = () => {
         dispatch(deleteFromCart(idToDeleteSpecfic));

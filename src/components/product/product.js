@@ -24,7 +24,7 @@ export const  Product = (props) => {
                     <Card.Text
                         className="productPrice p-auto fs-6 fw-semibold">{`${props.product.price} EGP`}</Card.Text>
                     {changeButtons >= 1 ? <div className="product-btn"><ProductQuantityCounter product={props.product}  quantity={changeButtons} /></div>:
-                    <Button variant="primary product-btn fs-6 fw-bold " className=" mt-auto d-block product-btn"
+                    <Button  id="btn-primary" variant="primary product-btn fs-6 fw-bold " className=" mt-auto d-block product-btn"
                             onClick={() => addItemToCart(props.product)}>ADD TO CART</Button>
                     }
                 </Card.Body>

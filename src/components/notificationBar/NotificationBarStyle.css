@@ -24,7 +24,7 @@
 }
 
 .notificationBar li div:nth-child(1){
-    flex-grow: 1!important;
+    flex-grow: 1;
     text-align: center;
 }
 
@@ -59,7 +59,7 @@
     width: 75%;
     height: 100%;
     display: flex;
-    justify-content: space-between!important;
+    justify-content: space-between;
     align-items: baseline;
 
 }

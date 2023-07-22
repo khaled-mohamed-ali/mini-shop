@@ -12,10 +12,10 @@ export  const PaginationButtons = () => {
     const pageNumber = useSelector(state=> state.cart.pageNumber)
 
     return  (
-        <Pagination className="mainPagination justify-content-around">
-            <Pagination.Prev disabled={pageNumber <= 1} onClick={()=> dispatch(changePageNumber(pageNumber- 1))} />
-            <Pagination.Item className="active">{pageNumber}</Pagination.Item>
-            <Pagination.Next disabled={pageNumber >= 20}  onClick={()=> dispatch(changePageNumber(pageNumber + 1))}/>
+        <Pagination  className="mainPagination justify-content-around">
+            <Pagination.Prev id="pagination-btn" disabled={pageNumber <= 1} onClick={()=> dispatch(changePageNumber(pageNumber- 1))} />
+            <Pagination.Item  id="pagination-btn">{pageNumber}</Pagination.Item>
+            <Pagination.Next id="pagination-btn"  disabled={pageNumber >= 20}  onClick={()=> dispatch(changePageNumber(pageNumber + 1))}/>
         </Pagination>
 
 

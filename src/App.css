@@ -1,9 +1,9 @@
 *{
   box-sizing: border-box;
 }
-a:link  {
+#aLink:link  {
   text-decoration: none;
-  color: black!important;
+  color: black;
 }
 
 .App {
@@ -39,19 +39,19 @@ a:link  {
 .App-link {
   color: #61dafb;
 }
-.btn-primary {
-  background: #f68b1e !important;
-  color:#ffffff!important;
-  outline: none !important;
-  border: none!important;
+#btn-primary {
+  background: #f68b1e ;
+  color:#ffffff;
+  outline: none;
+  border: none;
   font-weight: 500;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,.2);
   border-radius: 4px;
   padding: 7px;
 }
 
-.btn-primary:hover {
-  background: #e07e1b!important;
+#btn-primary:hover {
+  background: #e07e1b;
 }
 
 @keyframes App-logo-spin {
@@ -63,9 +63,9 @@ a:link  {
   }
 }
 
-input:focus {
-  outline: none !important;
-  border-color: #ced4da!important;
-  box-shadow: none!important;
+#searchInput:focus {
+  outline: none ;
+  border-color: #ced4da;
+  box-shadow: none;
 }
 

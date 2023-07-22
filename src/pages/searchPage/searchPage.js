@@ -14,7 +14,7 @@ const SearchPage = () => {
 
     useEffect(() => {
         setSearchParams({query: searchItemName})
-    }, [])
+    }, [searchResults])
 
     return (
         <div className="">
