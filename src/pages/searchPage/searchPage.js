@@ -13,7 +13,7 @@ const SearchPage = () => {
     const [searchParams, setSearchParams] = useSearchParams();
 
     useEffect(() => {
-        setSearchParams({product: searchItemName})
+        setSearchParams({query: searchItemName})
     }, [])
 
     return (
