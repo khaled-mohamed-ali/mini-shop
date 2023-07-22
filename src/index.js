@@ -2,8 +2,8 @@ import React from 'react';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { store } from './store/store.js';
-import { Provider } from 'react-redux';
+import {store} from './store/store.js';
+import {Provider} from 'react-redux';
 import ReactDOM from "react-dom/client";
 import {
     createBrowserRouter,
@@ -20,52 +20,54 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
 
 
+        {
+            path: "/",
+            element: <App/>,
+            children: [
+                {
+                    path: "/",
+                    element: <MainPage/>,
+                },
+                {
+                    path: "/search",
+                    element: <SearchPage/>
+                },
+                {
+                    path: "/shoppingCart",
+                    element: <ShopingCart/>
+                },
 
-    {
-        path: "/",
-        element: <App/>,
-        children: [
-            {
-                path: "/",
-                element: <MainPage/>,
-            },
-            
-            {
-                path: "/shoppingCart",
-                element: <ShopingCart/>
-            },
-
-
-        ],
-    },
-
-    {
-        path: "/login",
-        element: <Login/>,
-    },
-
-    {
-        path: "/Register",
-        element: <Register/>,
-    },
-
-    {
-        path:"/search",
-        element: <SearchPage/>
-    }
+            ]
+        },
 
 
-]);
+        {
+            path: "/login",
+            element:
+                <Login/>,
+        }
+        ,
+
+        {
+            path: "/Register",
+            element:
+                <Register/>,
+        }
+        ,
+
+
+    ])
+;
 root.render(
-  <React.StrictMode>
-      <Provider store={store}>
-          <RouterProvider router={router} />
-          <NotificationBar/>
-      </Provider>
-  </React.StrictMode>
+    <React.StrictMode>
+        <Provider store={store}>
+            <RouterProvider router={router}/>
+            <NotificationBar/>
+        </Provider>
+    </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
+// to log results (for example: reportWebVitals())
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

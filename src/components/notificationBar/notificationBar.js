@@ -14,7 +14,7 @@ export const NotificationBar = () => {
                     notification.map((notification, index) =>
 
                         <li key={index}>
-                            {console.log(Object.keys(notification))}
+                            {(Object.keys(notification))}
                             <div className={'notification-container'}>
                                 <div className="">
                                     <span> &#10003; &nbsp;&nbsp; {Object.values(notification)} </span>
