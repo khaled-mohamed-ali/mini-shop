@@ -41,8 +41,8 @@ export const Header = () => {
     }
 
     return (
-        <div className="Header mt-4">
-            <Navbar bg='white' expand="lg">
+        <div className="NavHeader mt-4">
+            <Navbar bg='white' expand="lg" className="mainNavContainer">
                 <Container className='justify-content-between w-75'>
                     <Navbar.Brand className="fw-bolder pageName"><Link id="aLink" to="/">MINI SHOP <div className="starContainer">
                         <BsFillStarFill className="logoStart"/></div></Link></Navbar.Brand>
@@ -57,6 +57,7 @@ export const Header = () => {
                                 aria-label="Search"
                                 value={searchItem}
                                 onChange={(event) => setSearchItem(event.target.value)}
+                                autocomplete="off"
                             />
                             <Link id="aLink" to={searchItem.length >= 1 ? '/search' : '/'}>
                                 <Button onClick={() => {
