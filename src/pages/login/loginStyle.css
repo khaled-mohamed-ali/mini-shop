@@ -6,6 +6,9 @@
     padding:5px;
 }
 
+.loginContainer {
+    width: 35%
+}
 
 @media only screen and (max-width: 992px) {
     .loginContainer {

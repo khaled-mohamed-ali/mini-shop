@@ -44,7 +44,7 @@ export const Login = () => {
     } else {
 
         return (
-            <MDBContainer className="loginContainer pt-5   my-5 d-flex flex-column w-25 h-100">
+            <MDBContainer className="loginContainer pt-5  my-5 d-flex flex-column  h-100">
                 <Formik
                     initialValues={{
                         email: '',

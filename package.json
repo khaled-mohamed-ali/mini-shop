@@ -11,6 +11,9 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.3",
+    "formik": "^2.4.3",
+    "gh-pages": "^5.0.0",
+    "homepage": "http://khaled-mohamed-ali.github.io/mini-shop",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "mdb-react-ui-kit": "^6.0.0",
@@ -31,7 +34,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
