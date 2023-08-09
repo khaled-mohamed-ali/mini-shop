@@ -58,7 +58,7 @@ export const Register = () => {
     return (
         <>
             <MDBContainer fluid>
-                <MDBCard className=' text-black m-5 ' style={{borderRadius: '25px'}}>
+                <MDBCard className=' text-black  m-md-5 ' style={{borderRadius: '25px'}}>
                     <MDBCardBody>
                         <MDBRow>
                             <MDBCol md='10' lg='6'
@@ -79,7 +79,7 @@ export const Register = () => {
                                 >
                                     {({errors, touched, handleSubmit, values}) => (
                                         <Form
-                                            className=" inputsForm d-flex flex-column h-100   align-items-center  w-75"
+                                            className=" inputsForm d-flex flex-column h-100   align-items-center w-100"
                                             onSubmit={handleSubmit}>
                                             <div>
                                                 <Field name="name"
