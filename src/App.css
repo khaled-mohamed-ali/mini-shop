@@ -1,6 +1,6 @@
 *{
   box-sizing: border-box;
-  outlint: none!important;
+  outline: none!important;
 }
 #aLink:link  {
   text-decoration: none;

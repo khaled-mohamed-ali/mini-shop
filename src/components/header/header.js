@@ -43,12 +43,12 @@ export const Header = () => {
     return (
         <div className="NavHeader mt-4">
             <Navbar bg='white' expand="lg" className="mainNavContainer">
-                <Container className='justify-content-between w-75'>
+                <Container className='justify-content-between vw-75'>
                     <Navbar.Brand className="fw-bolder pageName"><Link id="aLink" to="/">MINI SHOP <div className="starContainer">
                         <BsFillStarFill className="logoStart"/></div></Link></Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll"/>
                     <Navbar.Collapse id="navbarScroll" className="justify-content-between flex-grow-1">
-                        <Form className="d-flex flex-grow-1  justify-content-center ">
+                        <Form  className="d-flex flex-grow-1  mt-3 mt-md-0 justify-content-center ">
                             <Form.Control
                                 id="searchInput"
                                 type="text"

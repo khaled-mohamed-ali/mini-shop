@@ -4,7 +4,6 @@ import "./productStyle.css"
 import {useDispatch, useSelector} from "react-redux";
 import {addToCart,hideNotificationMessage} from "../../store/shopingCartSlice";
 import {ProductQuantityCounter} from "../productQuantityCounter/productQuantityCounter";
-import {useEffect} from "react";
 
 
 export const  Product = (props) => {
@@ -16,7 +15,7 @@ export const  Product = (props) => {
     const changeButtons = useSelector(state => state.cart.value.find(q => q.id == props.product.id)?.quantity)
         return (
             <Card className="product-card position-relative border-0 rounded-0 p-3" style={{height: '32rem'}}>
-                <Card.Img variant="top" src={props.product.images} className="productImg    p-3 pb-0 "/>
+                <Card.Img variant="top" src={props.product.images} className="productImg   p-3 pb-0 "/>
                 <Card.Body className="d-flex row justify-content-between">
                     <Card.Title style={{maxHeight: "30px", overflow: "hidden"}}>{props.product.title}</Card.Title>
                     <Card.Text className="productDescription lh-1.1"

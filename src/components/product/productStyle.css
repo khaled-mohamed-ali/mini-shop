@@ -28,6 +28,11 @@
 @media screen and (max-width:578px) {
     .productImg {
         width: 90%;
+        margin: 0px auto;
+    }
+
+    .product-btn {
+        visibility: visible;
     }
 
     .card-text {
