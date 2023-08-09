@@ -14,7 +14,7 @@ export const ShopingCart = () => {
     const isEmpty = useSelector(state => state.cart.value.length)
 
     return (
-        <Container className="w-75 mt-3 ">
+        <Container className="vw-75 mt-3 ">
             {deleteMessage ? <DeleteWarning/> :
                     isEmpty <= 0 ? <EmptyCart/> :
                         <Row>

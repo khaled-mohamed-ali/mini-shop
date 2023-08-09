@@ -1,6 +1,6 @@
 import React from "react";
-import  './emptyShopingCart.css';
-import {Link, Outlet} from 'react-router-dom'
+import './emptyShopingCart.css';
+import {Link} from 'react-router-dom'
 
 export const EmptyCart = () => {
     return (
@@ -11,6 +11,6 @@ export const EmptyCart = () => {
             <Link to={'/'}>
                 <button className={'btn-empty-cart'}>بدء التسوق</button>
             </Link>
-    </div>
+        </div>
     )
 }

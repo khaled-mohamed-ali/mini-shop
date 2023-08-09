@@ -16,7 +16,7 @@ export const NotificationBar = () => {
                         <li key={index}>
 
                             <div className={'notification-container'}>
-                                <div className="">
+                                <div className="vw-100">
                                     <span> &#10003; &nbsp;&nbsp; {Object.values(notification)} </span>
                                 </div>
                                 <div>

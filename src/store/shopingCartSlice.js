@@ -31,7 +31,7 @@ const shoppingSlice = createSlice({
         deleteFromCart(state, action) {
             state.value = state.value.filter((item) => item.id != state.idCatcher);
             state.deleteConfirm = false;
-            state.notification.push({delete: 'Product was removed from cart successfully'})
+            state.notification.push({delete: 'Product was removed from cart'})
 
         },
         plus(state, action) {

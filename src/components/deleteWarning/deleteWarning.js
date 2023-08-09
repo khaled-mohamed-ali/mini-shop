@@ -12,7 +12,7 @@ export const DeleteWarning = () => {
     const dispatch = useDispatch();
     const deleteFromTheCart = () => {
         dispatch(deleteFromCart(idToDeleteSpecfic));
-        setTimeout( () => dispatch(hideNotificationMessage()),3000)
+        setTimeout( () => dispatch(hideNotificationMessage()),30000)
     }
 
 
