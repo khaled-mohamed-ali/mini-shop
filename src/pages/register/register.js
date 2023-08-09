@@ -22,7 +22,6 @@ import * as Yup from 'yup';
 
 
 export const Register = () => {
-
     const SignupSchema = Yup.object().shape({
         name: Yup.string()
             .min(2, 'Too Short!')
@@ -48,8 +47,6 @@ export const Register = () => {
                         setTimeout(() => dispatch(hideNotificationMessage()), 3000)
                 )
             }
-
-
         })
     }
 
@@ -80,7 +77,7 @@ export const Register = () => {
                                         registerHandle({...allRules, ...values})
                                     }}
                                 >
-                                    {({errors, touched, handleSubmit,values}) => (
+                                    {({errors, touched, handleSubmit, values}) => (
                                         <Form
                                             className=" inputsForm d-flex flex-column h-100   align-items-center  w-75"
                                             onSubmit={handleSubmit}>
@@ -119,17 +116,20 @@ export const Register = () => {
                                                        value={values.password}
                                                        placeholder="password"
                                                        style={errors.password ? {borderColor: "#B00020"} : null}
-                                                       label='Your password' id='form1' type='password' className='w-100'/>
+                                                       label='Your password' id='form1' type='password'
+                                                       className='w-100'/>
                                                 {errors.password && touched.password ? (
                                                     <div
-                                                        style={errors.password ? {color: "#B00020"} : null} className="errorMessage"
+                                                        style={errors.password ? {color: "#B00020"} : null}
+                                                        className="errorMessage"
                                                     >
                                                         {errors.password}
                                                     </div>
                                                 ) : null}
                                             </div>
                                             <div>
-                                                <button type="submit" className='btn-primary w-100 py-2 px-4 mb-4' size='lg'
+                                                <button type="submit" id="btn-primary" className='btn-primary w-100 py-2 px-4 mb-4'
+                                                        size='lg'
                                                         disabled={isSuccess}
                                                 >Register
                                                 </button>
