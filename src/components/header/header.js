@@ -59,7 +59,7 @@ export const Header = () => {
                                 aria-label="Search"
                                 value={searchItem}
                                 onChange={(event) => setSearchItem(event.target.value)}
-                                autocomplete="off"
+                                autoComplete="off"
                             />
                             <Link id="aLink" to={searchItem.length >= 1 ? '/search' : '/'}>
                                 <Button onClick={() => {

@@ -21,6 +21,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {NotificationBar} from "../../components/notificationBar/notificationBar";
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
+import {BiHide, BiShow} from "react-icons/bi";
 
 export const Login = () => {
 
@@ -34,6 +35,7 @@ export const Login = () => {
     const dispatch = useDispatch()
     const [login, {data, isSuccess}] = useUserLoginPostMutation();
     const [user, setUser] = useState('')
+    const [showPass,setShowPass] = useState(false)
 
     if (data && isSuccess) {
         dispatch(setCredentials(data.access_token))
@@ -58,7 +60,7 @@ export const Login = () => {
                 >
                     {({errors, touched, handleSubmit,values}) => (
                         <Form onSubmit={handleSubmit}>
-                            <Field className={"inputFiled"} name= "email"  wrapperClass='mb-4' label='Email address' id='form1' type='email'/>
+                            <Field className={"inputFiled"} autoComplete="off" name= "email"  wrapperClass='mb-4' label='Email address' id='form1' type='email'/>
                             {errors.email && touched.email ? (
                                 <div
                                     style={errors.email ? {color: "#B00020"} : null}
@@ -66,7 +68,14 @@ export const Login = () => {
                                     {errors.email}
                                 </div>
                             ) : null}
-                            <Field  className={"inputFiled"} name="password" wrapperClass='mb-4' label='Password' id='form2' type='password'/>
+                            <Field  className="inputFiled"
+                                    type= {showPass? "text" :"password"}
+                                    autoComplete="off"
+                                    name="password"
+                                    wrapperClass='mb-4'
+                                    label='Password'
+                                    id='form2'
+                            />
                             {errors.password && touched.password ? (
                                 <div
                                     style={errors.password ? {color: "#B00020"} : null}
@@ -75,10 +84,18 @@ export const Login = () => {
                                 </div>
                             ) : null}
 
-                            <div className="d-flex justify-content-between mx-3 mb-4">
-                                <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Remember me'/>
-                                <a  id="aLink" href="!#">Forgot password?</a>
+
+                            <div className="d-flex justify-content-start p-1">
+                                <div className="bolder">
+                                    <button
+                                        type="button"
+                                        onClick={e => setShowPass(!showPass)} className="showPass">
+                                        {showPass? <BiShow/>:<BiHide/>}
+                                    </button>
+                                    {showPass? " hide passowrd" :" show password"}
+                                </div>
                             </div>
+
                             <button type="submit" id="btn-primary" className='btn-primary  w-100 py-2 px-4 mb-4' size='lg'
                             >login
                             </button>

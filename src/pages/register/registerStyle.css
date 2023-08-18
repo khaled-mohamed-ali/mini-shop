@@ -7,6 +7,18 @@
     height: auto;
 }
 
+.pointer {
+    cursor: pointer;
+}
+/* this class work in login and register*/
+.showPass {
+    background: white;
+    color: gray;
+    border: 0;
+    font-size: 22px;
+    padding: 0;
+}
+
 .errorMessage {
     word-wrap: break-word ;
     padding-bottom: 10px;
